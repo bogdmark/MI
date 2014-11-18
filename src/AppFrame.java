@@ -67,67 +67,67 @@ public class AppFrame extends JFrame{
         JPanel hitsPanel = new JPanel();
         hitsPanel.setLayout(new BorderLayout());
         hitsPanel.add(hitsLabel, BorderLayout.PAGE_START);
-        hitsPanel.add(hitsArea, BorderLayout.CEN 
+        hitsPanel.add(hitsArea, BorderLayout.CENTER);
 
         this.setLayout(new BorderLayout());
-        this.add(topPanel, BorderLayout.PAGE_STA 
-        this.add(hitsPanel, BorderLayout.CENTER) 
-        this.add(bottomPanel, BorderLayout.PAGE_ 
+        this.add(topPanel, BorderLayout.PAGE_START);
+        this.add(hitsPanel, BorderLayout.CENTER);
+        this.add(bottomPanel, BorderLayout.PAGE_END);
     }
 
     private void buttonListeners()
     {
-        actorBrowseButton.setActionCommand("acto 
-        ActionListener a1 = new ButtonActionList 
+        actorBrowseButton.setActionCommand("actorBrowse");
+        ActionListener a1 = new ButtonActionListener();
         actorBrowseButton.addActionListener(a1);
 
-        movieBrowseButton.setActionCommand("movi 
-        ActionListener a2 = new ButtonActionList 
+        movieBrowseButton.setActionCommand("movieBrowse");
+        ActionListener a2 = new ButtonActionListener();
         actorBrowseButton.addActionListener(a2);
 
         searchButton.setActionCommand("search");
-        ActionListener a3 = new ButtonActionList 
+        ActionListener a3 = new ButtonActionListener();
         actorBrowseButton.addActionListener(a3);
 
         prevButton.setActionCommand("prev");
-        ActionListener a4 = new ButtonActionList 
+        ActionListener a4 = new ButtonActionListener();
         actorBrowseButton.addActionListener(a4);
 
         nextButton.setActionCommand("next");
-        ActionListener a5 = new ButtonActionList 
+        ActionListener a5 = new ButtonActionListener();
         actorBrowseButton.addActionListener(a5);
 
-        detailsButton.setActionCommand("details" 
-        ActionListener a6 = new ButtonActionList 
+        detailsButton.setActionCommand("details");
+        ActionListener a6 = new ButtonActionListener();
         actorBrowseButton.addActionListener(a6);
     }
 
-    public class ButtonActionListener implements 
+    public class ButtonActionListener implements ActionListener {
 
         @Override
-        public void actionPerformed(ActionEvent  
+        public void actionPerformed(ActionEvent e) {
 
-            if (e.getActionCommand().equals("act 
+            if (e.getActionCommand().equals("actorBrowse"))
             {
-                actorFolderField.setText("D:\\") 
+                actorFolderField.setText("D:\\");
             }
-            if (e.getActionCommand().equals("mov 
-            {
-
-            }
-            if (e.getActionCommand().equals("sea 
+            if (e.getActionCommand().equals("movieBrowse"))
             {
 
             }
-            if (e.getActionCommand().equals("pre 
+            if (e.getActionCommand().equals("search"))
             {
 
             }
-            if (e.getActionCommand().equals("nex 
+            if (e.getActionCommand().equals("prev"))
             {
 
             }
-            if (e.getActionCommand().equals("det 
+            if (e.getActionCommand().equals("next"))
+            {
+
+            }
+            if (e.getActionCommand().equals("details"))
             {
 
             }
